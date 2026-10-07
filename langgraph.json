@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "mie": "./app/studio.py:graph",
+    "researcher": "./app/researcher.py:graph"
+  },
+  "env": ".env"
+}

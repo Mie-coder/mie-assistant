@@ -1,0 +1,19 @@
+[project]
+name = "mie-assistant"
+version = "0.1.0"
+description = "MIE · 小咩助手 — 使用 Deep Agents 逐章构建的个人研究助手"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "deepagents==0.7.13",
+    "langchain-openai==1.6.2",
+    "tavily-python==0.8.1",
+    "python-dotenv==1.2.3",
+    "httpx==0.28.1",
+    "langgraph-sdk==0.4.4",
+    "langgraph-cli[inmem]>=0.4.32",
+    "textual>=8.2.8,<9",
+]
+
+[tool.uv]
+package = false
+

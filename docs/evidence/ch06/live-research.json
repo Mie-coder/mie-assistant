@@ -1,0 +1,48 @@
+{
+  "mode": "live",
+  "stages": [
+    {
+      "stage": "start",
+      "tools": [
+        "start_async_task"
+      ],
+      "seconds": 1.59
+    },
+    {
+      "stage": "chat",
+      "tools": [],
+      "seconds": 1.13
+    },
+    {
+      "stage": "update",
+      "tools": [
+        "update_async_task"
+      ],
+      "seconds": 2.73
+    },
+    {
+      "stage": "result",
+      "tools": [
+        "check_async_task"
+      ],
+      "seconds": 3.54
+    }
+  ],
+  "status_after_start": "pending",
+  "same_task_new_run": true,
+  "server_status": "success",
+  "actual_search_tool_results": 1,
+  "search_source_urls": [
+    "https://reference.langchain.com/python/langgraph.checkpoint",
+    "https://www.learnwithparam.com/blog/langgraph-persistence-thread-models-production",
+    "https://www.educative.io/courses/langgraph-from-langchain-user-to-agent-builder/persistence-and-checkpoints",
+    "https://blogs.oracle.com/developers/langgraph-persistence-with-oracle-ai-database",
+    "https://medium.com/@vinodkrane/mastering-persistence-in-langgraph-checkpoints-threads-and-beyond-21e412aaed60"
+  ],
+  "result_source_urls": [
+    "https://reference.langchain.com/python/langgraph.checkpoint",
+    "https://reference.langchain.com/python/langgraph.checkpoint"
+  ],
+  "result": "研究任务 `[task ID omitted]` 状态：**success**（执行成功，但有资料局限，需如实说明）。\n\n## 研究员返回的两条结论\n\n**结论一：thread（线程）是检查点保存的唯一 ID 标识，用于对多次 run 进行状态检查点持久化，适用于多租户聊天等需维持独立状态的场景；调用图时必须指定 `thread_id`。**\n来源：https://reference.langchain.com/python/langgraph.checkpoint\n\n**结论二：run（运行）指图的一次执行；同一 thread 下多次不同的 run 共享该 thread 的检查点序列，因此可通过传入相同 `thread_id`（可选 `checkpoint_id`）从线程中途某检查点启动新的一次 run。**\n来源：https://reference.langchain.com/python/langgraph.checkpoint\n\n## 资料局限（研究员明确标注，请一并采信）\n\n- 本次仅搜索 1 次，结果中唯一官方域名来源是 `reference.langchain.com`（LangChain 官方参考文档），它明确覆盖了 thread 的定义与 `thread_id`/`checkpoint_id` 用法。\n- 但该来源**没有给出 \"run\" 的正式定义条目**。结论二中\"run 为图的一次执行、与 thread 的共享关系\"是基于官方原文（\"Threads enable the checkpointing of multiple different runs\"、\"从线程中途某检查点 kick off a run\"）的**推断性表述**，不是官方对 run 的独立定义。\n- 因此，**本次未能从搜到的官方文档中确认 \"run\" 的权威定义**，也未检索到 `langchain-ai.github.io/langgraph` 或 `docs.langchain.com` 对应页面用于交叉核对。\n- 其余结果（learnwithparam、educative、medium、oracle 博客等）均为第三方站点，按你追加的要求未被采用。\n\n我没有自行重搜或补充来源；若需要把\"run\"的定义落实为官方原文，需要放宽搜索次数限制或指定文档页面，你可以再给指令。",
+  "date": "2026-09-28"
+}
